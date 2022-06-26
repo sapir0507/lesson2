@@ -1,7 +1,19 @@
 .scroll-window{
-    max-height: 58vh;
+    max-height: 22vh;
     scroll-behavior: smooth;
     overflow-y: auto;
-    border-top: 1px solid rgba(128, 128, 128, 0.389);
+    border: 1px solid rgba(128, 128, 128, 0.389);
     border-radius: 5px;
+    
+}
+.full-scroll-window::-webkit-scrollbar {
+    display: none;
+}
+
+.full-scroll-window{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: 87vh;
+    scroll-behavior: smooth;
+    overflow-y: auto;
 }

@@ -16,9 +16,18 @@ const getUsers = (id) => {
     return axios.get(url + `/${id}`);
 }
 
+const getAllUsersIds = async() => {
+    let users = await axios.get(url);
+    let usersIds = users.data.map((user)=>{
+        return user.id
+    })
+    return usersIds;
+}
+
 const usersUtil = {
     getUsers, 
-    getUserDetailsByUserId
+    getUserDetailsByUserId,
+    getAllUsersIds
 }
 
 export default usersUtil;

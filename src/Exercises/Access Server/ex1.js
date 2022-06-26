@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import ListGroup from 'react-bootstrap/ListGroup';
 import Container from 'react-bootstrap/Container';
@@ -35,22 +36,19 @@ function Ex1ParentComp() {
 
     }
 
-    return ( <div>
-        <div className="mt-4">
-            UserId: <input type="text" name="userId" id="userId" onChange={(e) => { setUserID(e.target.value) }}/>
-        </div>
-        <hr />
-        <input type="button" value="get email and username by userid" onClick={() => { getDetails() }}/>
-        
-        <hr />
-        <h2>User:</h2>
-        {userDetails? 
-            <div className="m-2">
-                <div>Name: {userDetails.name} </div>
-                <div>Email: {userDetails.email}</div> 
-            </div>: <div>Please enter a user's ID</div>
-        }
-        {userDetails?<div>
+    return ( 
+    <div>
+        {userID && <div>
+           {userDetails && 
+            <div>
+                <div> 
+                    User: {userDetails.name}
+                </div>
+                <div>
+                    email: {userDetails.email}
+                </div>
+                <hr />
+                <div>
             <div>
             {todoTitle.length<=5? 
                 <h2>First five todos:</h2>: 
@@ -73,7 +71,11 @@ function Ex1ParentComp() {
                 
             </Container>}
         </div>
-        </div>:<div></div>}
+        </div>
+            </div>
+            }
+        </div>}
+        
     </div> );
 }
 

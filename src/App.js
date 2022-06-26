@@ -1,10 +1,10 @@
 import Container from 'react-bootstrap/Container'; 
-import Ex1ParentComp from './Exercises/Access Server/ex1';
+import Ex2Comp from './Exercises/Access Server/ex2';
 
 function App() {
   return (
   <Container>
-    <Ex1ParentComp></Ex1ParentComp>
+    <Ex2Comp></Ex2Comp>
   </Container>
   );
 }

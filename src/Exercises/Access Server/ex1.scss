@@ -1,7 +1,7 @@
 .scroll-window{
-    height: 58vh;
+    max-height: 58vh;
     scroll-behavior: smooth;
-    overflow-y: scroll;
+    overflow-y: auto;
     border-top: 1px solid rgba(128, 128, 128, 0.389);
     border-radius: 5px;
 }
